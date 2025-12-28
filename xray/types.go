@@ -9,12 +9,15 @@ type Trace struct {
 }
 
 type Step struct {
-	Name      string                 `json:"step"`
-	Input     map[string]interface{} `json:"input,omitempty"`
-	Filters   map[string]FilterRule  `json:"filters_applied,omitempty"`
-	Evals     []CandidateEvaluation  `json:"evaluations,omitempty"`
-	Output    map[string]interface{} `json:"output,omitempty"`
-	Reasoning string                 `json:"reasoning"`
+	Name       string                 `json:"step"`
+	StepID     string                 `json:"step_id,omitempty"`
+	StartedAt  time.Time              `json:"started_at,omitempty"`
+	DurationMs int64                  `json:"duration_ms,omitempty"`
+	Input      map[string]interface{} `json:"input,omitempty"`
+	Filters    map[string]FilterRule  `json:"filters_applied,omitempty"`
+	Evals      []CandidateEvaluation  `json:"evaluations,omitempty"`
+	Output     map[string]interface{} `json:"output,omitempty"`
+	Reasoning  string                 `json:"reasoning"`
 }
 
 type FilterRule struct {

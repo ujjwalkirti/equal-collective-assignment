@@ -1,0 +1,13 @@
+bin/
+*.exe
+*.log
+*.out
+node_modules/
+.DS_Store
+.env
+.env.*
+next-env.d.ts
+.next/
+dashboard/node_modules/
+dashboard/.next/
+dashboard/out/
